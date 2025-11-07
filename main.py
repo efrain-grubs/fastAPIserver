@@ -7,4 +7,4 @@ app = FastAPI()
 def read_root():
     
     
-    return {"hello world. pleaseeeee work is the pipeline workin "}
+    return {"hello world. pleaseeeee work is the pipeline"}
