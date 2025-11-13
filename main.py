@@ -7,4 +7,4 @@ app = FastAPI()
 def read_root():
     
     
-    return {"yayayayyya kh"}
+    return {"yayayayyyakh"}
