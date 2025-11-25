@@ -7,4 +7,4 @@ app = FastAPI()
 def read_root():
     
     
-    return {"plaed0k"}
+    return {"plad0k"}
