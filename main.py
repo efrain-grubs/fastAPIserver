@@ -1,37 +1,41 @@
 from fastapi import FastAPI
 from openai import OpenAI
 import os
+from dotenv import load_dotenv
 app = FastAPI()
+load_dotenv()
 API_KEY = os.getenv("API_KEY")
-# client = OpenAI(API_KEY)
+print("something",API_KEY)
+client = OpenAI(api_key=API_KEY)
 
 @app.get("/")
 def read_root():
 
-    # response = client.responses.create(
-    #     model="gpt-5",
-    #     input=[
-    #         {
-    #             "role": "user",
-    #             "content": [
-    #                 {
-    #                     "type": "input_text",
-    #                     "text": "What teams are playing in this image?",
-    #                 },
-    #                 {
-    #                     "type": "input_image",
-    #                     "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/LeBron_James_Layup_%28Cleveland_vs_Brooklyn_2018%29.jpg"
-    #                 }
-    #             ]
-    #         }
-    #     ]
-    # )
+    response = client.responses.create(
+        model="gpt-5",
+        input=[
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "input_text",
+                        "text": "What teams are playing in this image?",
+                    },
+                    {
+                        "type": "input_image",
+                        "image_url": "https://images.unsplash.com/photo-1517649763962-0c623066013b"
 
-    # print(response.output_text)
+                    }
+                ]
+            }
+        ]
+    )
 
-    # response = response.output_text
+    
 
-    response = "hi "
+    message = response.output_text
+
+    # response = "hi "
     
     
-    return {"respose": response}
+    return {"response": message}
