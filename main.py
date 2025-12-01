@@ -6,7 +6,7 @@ app = FastAPI()
 load_dotenv()
 # API_KEY = os.getenv("API_KEY")
 # print("something",API_KEY)
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="hi")
 
 @app.get("/")
 def read_root():
@@ -38,4 +38,4 @@ def read_root():
     # response = "h "
     
     
-    return {"response": message}
+    return {"response": "no this is not a sandwich"}
