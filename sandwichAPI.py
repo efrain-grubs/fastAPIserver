@@ -12,8 +12,8 @@ def sandwich():
     baseURL = 'DataImages/'
     # result = CLIENT.infer(baseURL+'cat.jpeg', model_id="sandwich-tqrld/1")
     # result = CLIENT.infer(baseURL+'hamSandwich.jpg', model_id="sandwich-tqrld/1")
-    result = CLIENT.infer(baseURL+'hotdog.jpeg', model_id="sandwich-tqrld/1")
-    # result = CLIENT.infer(baseURL+'dog.jpeg', model_id="sandwich-tqrld/1")
+    # result = CLIENT.infer(baseURL+'hotdog.jpeg', model_id="sandwich-tqrld/1")
+    result = CLIENT.infer(baseURL+'dog.jpeg', model_id="sandwich-tqrld/1")
     #hi there
     # Check if any predictions were made
     if result['predictions'] and len(result['predictions']) > 0:
