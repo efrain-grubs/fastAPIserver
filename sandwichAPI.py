@@ -23,4 +23,4 @@ def sandwich():
     else:
         print("THIS ISN'T A SANDWICH")
         return "THIS ISN'T A SANDWICH"
-# sandwich()
+sandwich()
