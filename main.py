@@ -10,10 +10,16 @@ def read_root():
    
 
  
-    sandwich = sandwich()
+    value = sandwich()
+
+
+
+
+
+
     response = "hello world"
 
 
     
     
-    return {"response": response, "sandwich_result": sandwich}
+    return {"response": response, "sandwich_result": value}
