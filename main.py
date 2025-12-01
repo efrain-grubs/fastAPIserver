@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 import os
 from dotenv import load_dotenv
+from sandwichAPI import sandwich
 app = FastAPI()
 
 
@@ -9,11 +10,11 @@ def read_root():
 
    
 
-    
+    response = sandwich()
 
-    message = "hello world"
+    # message = "hello world"
 
 
     
     
-    return {"response": "no this is not a sandwich"}
+    return {"response": response}
