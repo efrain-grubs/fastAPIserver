@@ -31,7 +31,7 @@ def read_root():
 
     # response = response.output_text
 
-    response = "hi"
+    response = "hi "
     
     
     return {"respose": response}
