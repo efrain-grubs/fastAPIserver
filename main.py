@@ -29,4 +29,4 @@ def read_root():
     print(response.output_text)
     
     
-    return {"response": response.output_text}
+    return {"respose": response.output_text}
