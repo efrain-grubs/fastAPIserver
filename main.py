@@ -1,20 +1,33 @@
 from fastapi import FastAPI
+from inference_sdk import InferenceHTTPClient
 import os
-from dotenv import load_dotenv
-from sandwichAPI import sandwich
 app = FastAPI()
 
 
 @app.get("/")
 def read_root():
+    CLIENT = InferenceHTTPClient(
+    api_url="https://serverless.roboflow.com",
+    api_key="ZFtUgbaxUbTvna51Ypc0"
+    )
+
+    #hello
+
+    baseURL = 'DataImages/'
+    # result = CLIENT.infer(baseURL+'cat.jpeg', model_id="sandwich-tqrld/1")
+    # result = CLIENT.infer(baseURL+'hamSandwich.jpg', model_id="sandwich-tqrld/1")
+    result = CLIENT.infer(baseURL+'hotdog.jpeg', model_id="sandwich-tqrld/1")
+    # result = CLIENT.infer(baseURL+'dog.jpeg', model_id="sandwich-tqrld/1")
+    #hi there
+    # Check if any predictions were made
+    if result['predictions'] and len(result['predictions']) > 0:
+        print("THIS IS A SANDWICH")
+
+        return "THIS IS A SANDWICH"
+    else:
+        print("THIS ISN'T A SANDWICH")
+        return "THIS ISN'T A SANDWICH"
 
    
 
-    response = sandwich()
-
-    # message = "hello world"
-
-
     
-    
-    return {"response": response}
