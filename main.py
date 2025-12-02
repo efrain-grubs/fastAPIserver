@@ -1,19 +1,11 @@
 from fastapi import FastAPI
 import os
-from sandwichAPI import sandwich
+
 app = FastAPI()
 
 
 @app.get("/")
 def read_root():
-
-   
-
- 
-    value = sandwich()
-
-
-
 
 
 
@@ -22,4 +14,4 @@ def read_root():
 
     
     
-    return {"response": response, "sandwich_result": value}
+    return {"response": response}
