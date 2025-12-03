@@ -10,7 +10,7 @@ def read_root():
 
 
     response = "We've just made changes"
-    "lets watch  cicd in action "
+    "lets watch cicd in action "
 
 
     
