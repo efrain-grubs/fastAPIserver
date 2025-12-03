@@ -9,7 +9,7 @@ def read_root():
 
 
 
-    response = "how dy"
+    response = "howdy"
 
 
     
